@@ -15,6 +15,7 @@ async function fetchChangelogsData() {
     const changelogsList = document.getElementById("changelogs-list");
     const versionHeading = document.getElementById("version-name");
     const dateElement = document.getElementById("version-date");
+    const downloadLinkElement = document.getElementById("download-link");
   
     // Fetch the changelogs data from GitHub
     const data = await fetchChangelogsData();
@@ -25,6 +26,7 @@ async function fetchChangelogsData() {
       // Update the version heading and date
       versionHeading.textContent = changelogsData.version;
       dateElement.textContent = formatDate(changelogsData.date);
+      downloadLinkElement.href = changelogsData.download_url
   
       // Split the changelogs into an array using line breaks
       const changelogsArray = changelogsData.changelogs.split('\n');
