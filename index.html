@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+         <div class="blob">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: rgb(237, 36, 120); --darkreader-inline-stopcolor: #ebc594;" data-darkreader-inline-stopcolor=""></stop>
+                <stop offset="100%" style="stop-color: rgb(255, 0, 102); --darkreader-inline-stopcolor: #ef639f;" data-darkreader-inline-stopcolor=""></stop>
+              </linearGradient>
+            </defs>
+            <path  fill="url(#gradient)">
+                <animate attributeName="d" dur="15000ms" repeatCount="indefinite" 
+                values="M394.5,348.5Q364,447,262.5,425.5Q161,404,116.5,327Q72,250,133,202Q194,154,278,105Q362,56,393.5,153Q425,250,394.5,348.5Z;
+                M363.5,328Q340,406,234.5,432.5Q129,459,71,354.5Q13,250,101,197Q189,144,245.5,152Q302,160,344.5,205Q387,250,363.5,328Z;
+                M366.5,293.5Q300,337,216,395.5Q132,454,129,352Q126,250,134.5,157.5Q143,65,240.5,81.5Q338,98,385.5,174Q433,250,366.5,293.5Z;
+                M416.5,343.5Q358,437,246.5,443Q135,449,113.5,349.5Q92,250,130,179Q168,108,234,135.5Q300,163,387.5,206.5Q475,250,416.5,343.5Z;
+                M422,336.5Q350,423,254.5,415.5Q159,408,112,329Q65,250,126,196Q187,142,274.5,99Q362,56,428,153Q494,250,422,336.5Z;
+                M345,299.5Q307,349,225,392.5Q143,436,138,343Q133,250,147.5,174Q162,98,235.5,122.5Q309,147,346,198.5Q383,250,345,299.5Z;
+                M394.5,348.5Q364,447,262.5,425.5Q161,404,116.5,327Q72,250,133,202Q194,154,278,105Q362,56,393.5,153Q425,250,394.5,348.5Z;
+                ">
+                </animate>
+            </path>
+          </svg>
+    </div>
+    </section>
+
+    <div class="overlay"></div>
+<div class="intro">
+    <!-- <h1>Work In Progess</h1> -->
+    <h2></h2>
+</div>
+    <div class="container">
+        <!-- Introduction Section -->
+       
+
+        <!-- Card with Changelogs and Download Button -->
+        <div class="card">
+            <div class="content">
+                <h2 id="version-name"></h2>
+                <h5 id="version-date"></h5>
+
+                <h3>Changelogs</h3>
+                <ul class="hollow-list" id="changelogs-list">
+                </ul>
+                <a href="https://bit.ly/splashapp-latest" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 8,
+            speed: 400
+        }); 
+        </script>
+    <script src="script.js" defer></script>
+
+</body>
+</html>
